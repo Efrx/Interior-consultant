@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: 1px solid red;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+    --background-color: #000000;
+    --font-color: #FFFFFF;
+    --min-w: 32rem;
+    --max-w: 144rem;
+    --Lora: 'Lora', serif;
+    --Crimson: 'Crimson Pro', serif;
+    --Montserrat: 'Montserrat', sans-serif;
+}
+/*
+font-family: 'Crimson Pro', serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+body {
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    margin: 0 auto;
+    padding-inline: 2rem;
+    width: 100vw;
+    min-width: 32rem;
+    max-width: 144rem;
+    height: 8rem;
+}
+
+.header__logo {
+    font-family: var(--Crimson);
+    font-weight: 200;
+    font-size: 1.4rem;   
+    display: flex;
+    align-items: center;
+}
+
+.header__logo--botton {
+    border: 1px solid white;
+    padding: .7rem;
+    margin-inline-start: 3rem;
+}
+
+.header__logo--botton:hover {
+    background-color: #fff;
+    color: #000000;
+    transition: all .4s;
+    box-shadow: 0px 0px 26px 5px rgba(255,255,255,0.18);
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header__nav--item {
+    font-family: var(--Montserrat);
+    font-weight: 500;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.header__nav--item::before {
+    content: "";
+    display: block;
+    width: 0%;
+    height: .2rem;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: -.5rem;
+    transition: all .4s;
+}
+.header__nav--item:hover::before {
+    left: 0;
+    width: 100%;
+}
+.header__logo, .header__nav{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    /* padding-inline: 2rem; */
+    width: 100vw;
+    min-width: 32rem;
+    max-width: 144rem;
+    align-items: center;
+}
+
+
+.main__info h1 {
+    font-family: var(--Lora);
+    font-weight: 500;
+    font-size: 4.8rem;
+}
+.main__info p {
+    font-family: var(--Montserrat);
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+.main__info a {
+    font-family: var(--Montserrat);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.main__portfolio--imgcon-tainer,
+.main__portfolio--imgcon-tainer img {
+    width: 100%;
+}
+
+/*esto es para que tomen el mismo espaciado*/
+/* .main__info, .main__portfolio { 
+    flex-basis: 0;
+    flex-grow: 1;
+} */
