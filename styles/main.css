@@ -281,13 +281,6 @@ li {
     text-align: center;
 }
 
-@media (min-width: 769px) {
-    .menu-responsive {
-        /* outline: 1px solid red; */
-        /* display: none; */
-    }
-}
-
 @media (max-width: 768px) {
     /* … */
     .main__portfolio--content {
